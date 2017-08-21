@@ -1,14 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-
+ use Illuminate\Notifications\Notifiable;
 use Illuminate\Http\Request;
 use App\Brand;
 use Toastr;
-
+use Input;
 
 class PagesController extends Controller
 {
+
+    use Notifiable;
+
 
 
     public function __construct()
@@ -53,9 +56,8 @@ class PagesController extends Controller
 
         
         return redirect()->route('CBrands');
- Toastr::success('Record CreatedSuccessfully', 'Record Create', ["positionClass" => "toast-top-right"]);
-
-
+  
+    
 
 
 
